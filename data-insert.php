@@ -145,6 +145,14 @@
                     </select>
                 </td>
             </tr>
+            <tr>
+                <td>
+                    <label for="question type">Question Type</label>
+                </td>
+                <td> <input type="radio" name="questontype" id="rdopic" value="Picture"><label for="picture">Picture</label>
+                    <input type="radio" name="questontype" id="rdotxt" value="text"><label for="text">Text</label>
+                </td>
+            </tr>
         </table>
         
     </form>
