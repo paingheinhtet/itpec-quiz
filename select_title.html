@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select your category</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="./start.php" method="post"> 
+    <div class="w3-display-topmiddle w3-border">
+        <div class="w3-container  w3-cell">
+           <p>Volume 1</p> 
+            <ol>
+                <li><input type="checkbox" name="v1ch1" id="v1ch1"> Hardware</li>
+                <li><input type="checkbox" name="v1ch2" id="v1ch2"> Information Processing System</li>
+                <li> <input type="checkbox" name="v1ch3" id="v1ch3"> Software</li>
+                <li><input type="checkbox" name="v1ch4" id="v1ch4"> Database</li>
+                <li><input type="checkbox" name="v1ch5" id="v1ch5"> Network</li>
+                <li> <input type="checkbox" name="v1ch6" id="v1ch6"> Security</li>
+                <li> <input type="checkbox" name="v1ch7" id="v1ch7"> Data Structure and Algorithm</li>
+            </ol>                                                                            
+        </div>
+
+        <div class="w3-container  w3-cell">
+            <p> Volume 2</p>
+            <ol>
+                <li> <input type="checkbox" name="v2ch1" id="v2ch1"> Corporate and Legal Affairs</li>
+                <li> <input type="checkbox" name="v2ch2" id="v2ch2">Business Strategy</li>
+                <li> <input type="checkbox" name="v2ch3" id="v2ch3">Information Systems Strategy </li>
+                <li> <input type="checkbox" name="v2ch4" id="v2ch4"> Development Technology</li>
+                <li> <input type="checkbox" name="v2ch5" id="v2ch5"> Project Management</li>
+                <li> <input type="checkbox" name="v2ch6" id="v2ch6">Service Management </li>
+                <li> <input type="checkbox" name="v2ch7" id="v2ch7">System Audit and Internal Control</li>
+            </ol>                                                                       
+        </div>
+    </div>
+
+    <div class="w3-display-middle">
+      <div>
+        <p>Choose Year: <input type="radio" name="years" id="2022">2022  <input type="radio" name="years" id="2021">2021  <input type="radio" name="years" id="2020">2020</p>
+        <p>Choose Exam Timer: <input type="radio" name="timer" id="">30 minutes <input type="radio" name="timer" id="">90 minutes <input type="radio" name="timer" id=""> 120minutes</p>
+        <p>Choose Quiz Quantity:</p>
+      </div>
+      
+        <input class="w3-button w3-indigo" type="submit" value="start" name="Start">
+       
+    </div>
+</form>
+</body>
+</html>
