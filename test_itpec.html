@@ -2,20 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+<style>
+    
+</style>
+
 </head>
 <body>
+
 <div class="w3-row w3-border">
 <!--<embed src="2022_FE\t5-combined.pdf" width="800px" height="700px" /> --> 
 <iframe class="w3-twothird" src="2022_FE\2022S_FE_AM_Questions.pdf#toolbar=0" height="600px" frameborder="0" loading="lazy" ></iframe> <!-- Right side-->
  
     <div class="w3-third w3-border"><!-- Left Side start -->
-    <form action="./check_result.php">
-        <div class="w3-container w3-margin-top w3-margin-left">
-           <ol type="1" class="W3-ol ">
+    <!--<form action="./check_result.php">-->
+        <div class="w3-container w3-m  argin-top w3-margin-left" id="pagination">
+           <ol type="1" id="paginated-list" class="W3-ol" data-current-page="1" aria-live="polite">
                 <li> 
                     <label for="question1" class="w3-large">
                        
@@ -116,23 +120,32 @@
                     </li>
                 
             </ol><!-- list test-->
-                <div class="w3-bar w3-margin-top w3-large">
+              <!--  <div id="numbers" class="w3-bar w3-margin-top w3-large">
                     <a href="#" class="w3-button">&laquo;</a>
-                    <a href="#" class="w3-button w3-green">1</a>
-                    <a href="#" class="w3-button">2</a>
-                    <a href="#" class="w3-button">3</a>
-                    <a href="#" class="w3-button">4</a>
+                    <a href="#" id="num1" class="w3-button w3-green">1</a>
+                    <a href="#" id="num2" class="w3-button" >2</a>
+                    <a href="#" id="num3" class="w3-button">3</a>
+                    <a href="#" id="num4" class="w3-button">4</a>
                     <a href="#" class="w3-button">&raquo;</a>
-                  </div>
-                
-
-         </div><!-- -->
+                  </div> -->
+                  <nav class="pagination-container w3-bar w3-large">
+                    <button class="pagination-button w3-button" id="pre-button" title="Previous page" aria-label="Previoust page">
+                        &laquo;
+                    </button>
+                    <div id="pagination-numbers"></div>
+                    <button class="pagination-button w3-button" id="next-button" title="Next page" aria-label="Next page">&raquo;</button>
+                  </nav>   
+                  
+            </div><!-- -->
 
 <br>
 </div><!-- Left Side end -->
 
  <footer class="w3-container "><input class="w3-button w3-green w3-hover-aqua w3-round-xlarge" type="submit" value="Submit"></footer> 
-</form>
+<!-- </form> -->
 </div> <!-- row border div -->
+    <script>
+
+    </script>
 </body>
 </html>

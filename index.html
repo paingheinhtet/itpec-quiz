@@ -1,71 +1,186 @@
 <!DOCTYPE html>
-<html>
-    <head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        h1,h3,h4{
+            color:#ff0000;
+            text-shadow: #fffb00;
+        }
+        body {font-family: Arial, Helvetica, sans-serif;}
 
-<style type="text/css">
-     img {
-         width: 50px;       
-        float: right;
-     }
-h1 { font-size : 50px; text-align : center}
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
 
-h4 { text-align : center}
-h2 {text-align : center}
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
 
+button:hover {
+  opacity: 0.8;
+}
 
-h3 { font-size : 40px; text-align: center}
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
 
-</style> 
-<img src="https://www.ipa.go.jp/files/000009654.png" alt ="ITPEC Logo" >
-<span style="color: red;">
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
 
-<title>
-    ITPEC Quiz
-</title>
-<meta name="viewport" content="width=device-width,intial-scale=1.0">
-<meta http-equiv="refresh" content="30">
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+    </style>
 </head>
-<body style="background-color: rgb(255, 255, 255); ">
-    <br>
-   <br>
-   <br> 
-    <h1>
-    <B>ITPEC Quiz Training</B>
-</h1>
-<hr>
-
-<h3>Choose your level</h3>
-<h4>
-<br>
-<br>
-<br>
-    <a class="btn" href="">IT Exam </a>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a class="w3-button w3-aqua" href="select_title.html">FE Exam </a>
-</h4>
+<body style="background-image: url('image/bg_color.png');">
+    <div class="w3-bar w3-border w3-aqua">
+        <a href="index.html" class="w3-right"><img src="image/ITPEC-logo.gif" alt="ITPEC"></a>
+        <button  class="w3-bar-item w3-button w3-xlarge ">About Us</button>
+        <button  class="w3-bar-item w3-button w3-xlarge w3-hover-green">About Exam</button>
+        <button class="w3-bar-item w3-button w3-xlarge w3-hover-blue" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+    </div>
+    <div class="w3-container" >
+        <h1 class="w3-center w3-green">ITPEC OLD QUESTION</h1>
+        <h3 class="w3-center">CHOOSE EXAM LEVEL</h3>
+        <h4 class="w3-center w3-bar w3-dark-gray"> 
+            <a href="it_exam.html" class="w3-hover-blue w3-button">IT EXAM</a>
+             <a href="fe_select_title.html" class="w3-hover-red w3-button">FE EXAM</a></h4>
+    </div>
+    <div id="id01" class="modal">
+  
+        <form class="modal-content animate" action="/check.php" method="post">
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <img src="image/avatar.jpg" alt="Avatar" class="avatar">
+          </div>
+      
+          <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+      
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+              
+            <button type="submit">Login</button>
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+          </div>
+      
+          <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            <!-- <span class="psw">Forgot <a href="#">password?</a></span> -->
+          </div>
+        </form>
+      </div>
+      <script>
+        var modal=document.getElementById('id01');
+        window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+      </script>
 
 </body>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-   
-   
-    <footer>
-        
-       <h2> <a href="https://www.mcpamyanmar.org" target="_blank">About Us</a> 
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="https://itpec.org/" target="_blank">About the exam</a> </h2>
-       
-       
-    
-    
-    </footer>
-    </span>
-    </html>
 </html>
